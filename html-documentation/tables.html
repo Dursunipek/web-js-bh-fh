@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        --table: Tablo oluşturma etiketi
+        --tr: Table row
+        --td: table column
+        --tbody: tablo gövde kısmı
+        --thead: tablonun başlık kısmı
+        --colspan: kolonları birleştirir yatay
+        --rowspan: satırları birleştirir dikey
+        --Table ile tasarım çalışmaları eskide kalmış ve artık kullanılmıyor
+        --
+    -->
+    <table border="1" width="60%">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Model</th>
+          <th>Price</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Bmw</td>
+          <td>200.000$</td>
+          <td rowspan="2">bmw.jpeg - audi.jpeg</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Audi</td>
+          <td>250.000$</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mercedes</td>
+          <td colspan="2">300.000$ - mercedes.jpeg</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
