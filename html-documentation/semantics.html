@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        --Semantic etiketler içerik hakkında bilgi verirler
+        --Mantıksal etiketler kullanmak div,span'a göre daha etkili olur
+        --Header: Sayfanın baş kısmıdır. İçerisinde nav(linkler) ve h1 etiketi bulunabilir
+        --Aside: Sayfanın yanında oluşturulur. Kategoriler oluşturulabilir
+        --Nav: İçerisinde linkleri barındırır
+        --Main: Sayfanın orta kısmı
+        --Article: Makale niteliğinde içerikler yazılabilir
+        --Time: Makale yada paragraf içerisinde zaman belirtilen yerlerde kullanılan etiket. Arama motorları tarafından anlaşılması kolaylaşır
+        --Figure,Figcaption: Eklenen resim ve video hakkında kısa bir açıklama(Nerede çekildi?) yapmak için kullanılır.
+        --Section: div ile aynı mantıkdadır. Mantıksal bir anlamı yoktur.
+        --Footer: En altta olur. Firma ve haklar hakkında genel bilgiler verilir
+    -->
+    <header>
+      <h1>Header</h1>
+      <img src="#" alt="" />
+      <nav>
+        <ul>
+          <li><a href="#">Kategoriler</a></li>
+          <li><a href="#">Eğitimler</a></li>
+          <li><a href="#">Haberler</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside>
+      <h2>Kategoriler</h2>
+      <nav>
+        <h3>Html</h3>
+        <ul>
+          <li>Html nedir?</li>
+          <li>Html sayfa tasarımı</li>
+        </ul>
+        <h3>Css</h3>
+        <ul>
+          <li>Css nedir?</li>
+          <li>Css ile sayfa tasarımı</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h1>Main Block</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt earum
+        quis necessitatibus itaque quas suscipit blanditiis est, non, excepturi
+        dignissimos debitis voluptatum voluptatem delectus fugit repellat rerum
+        molestias ipsa. Natus, autem id adipisci sunt tempore nam voluptatum
+        velit nisi eaque! Perferendis voluptatibus fugit sit, culpa ad iusto
+        excepturi possimus rem?
+      </p>
+      <div id="all-articles">
+        <article>
+          <h2>Html nedir?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            illo ex qui id neque quasi error nulla suscipit! Eaque neque vero
+            molestias voluptatem! Quae, magnam commodi iusto dignissimos
+            incidunt temporibus.
+          </p>
+          <p>
+            Bu içerik Anıl Dursun İpek tarafından
+            <time datetime="2022-09-01 20.00"> 1 eylül 2022 </time>tarihinde
+            yazılmıştır
+          </p>
+        </article>
+        <article>
+          <h2>Html sayfa tasarımı</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            illo ex qui id neque quasi error nulla suscipit! Eaque neque vero
+            molestias voluptatem! Quae, magnam commodi iusto dignissimos
+            incidunt temporibus.
+          </p>
+          <p>
+            Bu içerik Anıl Dursun İpek tarafından
+            <time datetime="2022-09-01 20.00"> 1 eylül 2022 </time>tarihinde
+            yazılmıştır
+          </p>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
