@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        --action: Server tarafında bilgilerin içerisinde tutulduğu dosya. Backend tarafında oluşturulur
+        --Amaç form aracılığıyla kullanıcı bilgilerini alıp server tarafına iletmek
+        --Form div'ler ile yada tablo ile oluşturulabilir
+        --Form ögeleri label ve inputlar'dir
+        --Kaydet temizle gibi butonlar da kullanılabilir
+        --Bir çok input type vardır
+        --Input içerisindeki name attribute'i backend tarafında kullanılır
+        --Input içerisindeki id etiketi label ile ilişkilendirmek için kullanılır
+        --Bazı input type'larda min, max gibi attribute'lar kullanılarak aralık belirtilebilir
+    -->
+    <form action="register.php">
+      <table>
+        <tr>
+          <td style="width: 100px;"><label for="name">Name: </label></td>
+          <td><input type="text" id="name" placeholder="Enter name" /></td>
+        </tr>
+        <tr>
+          <td><label for="surname">Surname: </label></td>
+          <td><input type="text" id="surname" placeholder="Enter surname" /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><em>Your favorite programming language</em></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="radio" name="programming" id="c#" />
+            <label for="c#">C#</label>
+            <input type="radio" name="programming" id="python" />
+            <label for="python">Python</label>
+            <input type="radio" name="programming" id="java" />
+            <label for="java">Java</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label for="intro"><em>Introduce yourself</em></label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <textarea name="" id="intro" cols="30" rows="10"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="cities">Cities</label></td>
+          <td>
+            <select id="cities">
+              <option value="1">Option-1</option>
+              <option value="2">Option-2</option>
+              <option value="3">Option-3</option>
+              <option value="4">Option-4</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="eposta">E-mail: </label></td>
+          <td><input type="email" id="eposta" placeholder="Enter e-mail"/></td>
+        </tr>
+        <tr>
+          <td><label for="date">Date: </label></td>
+          <td><input type="datetime-local" id="date" /></td>
+        </tr>
+        <tr>
+          <td><label for="sifre">Password: </label></td>
+          <td><input type="password" id="sifre" placeholder="Enter password" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Save</button
+            ><button type="reset">Clear</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
