@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Basics</title>
+    <link rel="stylesheet" href=""><!--External Css Kodları Link ile bağlanır-->
+    <style>
+        /*Internal Css Kodları*/
+        h1/*Etiket-Selector*/{
+            color:red;
+            font-size: 20px;
+        }
+        .classTag/*Class adı '.' işareti ile başlamalıdır*/{
+            /*Uygulanacak css özellikleri*/
+        }
+        #idTag/*id adı '#' işareti ile başlamalıdır*/{
+            /*Uygulanacak css özellikleri*/
+        }
+        *{
+            /*Tüm tarayıcı üzerinde uygulanır. Baskınlığı azdır*/
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        --Css html sayfasını renklendirip gorunum kazandırır
+        --Style içerisine yazılır
+        --Selector: Css kodlarının uygulanacagı etiket
+        --Property: Etiket üzerindeki değişiklik yapılacak özellikler
+        --Values: Verilecek değer(boyut,renk...)
+        --Örnek kullanım
+        h1 -> Selector{
+            color -> property :red -> value ; 
+            font-size -> property : 20px -> value ;
+        }
+
+        --inline css: Sadece o satırda etiket içinde yazılan css'dir. İçine yazıldığı etikete ait kodlardır
+        --internal css: Sayfa içerisinde style bloğu altında yazılan css kodları
+        --external css: Dosya olarak her sayfaya erişimli ve tek bir dosya içerisindeki değişikliğin
+        tüm sayfalara etki ettiği bir css yöntemidir. En çok kullanılan yöntem.
+        <link rel="stylesheet" href="style.css"> kodu ile dış kaynaklı css bilgileri html sayfasına entegre edilir
+
+        --Css için id ve class attribute'ları kullanılabilir
+        --Id: 1 kere oluşturulur ve tek bir id tek bir etiket için kullanılır
+        --Class: Birden fazla etiket için kullanılabilir. Bir etiket birden fazla class'a bağlanabilir.
+        --Css de farklı önceliklendirmeler vardır. Önceliklendirmelere göre yapılan değişiklikler uygulanabilir
+
+        -- CSS Önceliklendirme
+        --Aynı seviyedeki değerler arasında en son atanan değer diğerlerini ezer (kesişen özellikler için)
+        --Id daha özel bir tanımlamadır ve normal tag'leri ezer
+        --Inline css kodları en baskın olan tipdir ve diğer tüm özellikleri ezer
+        --Id class etiketini de ezer
+        -- Inline Css > Id selector > Class selector > tag selector > browser default
+
+        -- CSS Inheritance
+        -- Css'de tüm özellikler alt tag'lere inherit edilmez.
+        -- Örneğin color,font-size gibi özellikler inherit edilirken border gibi özellikler edilmez
+        -- Eğer inherit edilmesini istersek "border: inherit" kodunu kullanmamız gerekir
+        -- Yada alttaki etiketin color özelliğini inherit olarak almaması için color: "initial;" kodunu kullanmamız gerekir
+        -- initial: default başlangıç değerlerini uygular
+
+    -->
+    <h1 style="color: white;background-color:darkslateblue;"></h1>>Css Basics</h1><!--Inline css örneği-->   
+</body>
+</html>

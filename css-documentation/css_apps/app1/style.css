@@ -1,0 +1,14 @@
+#header{
+    text-align: center;
+    font-size: 40px;
+}
+li{
+    background-color: #EBE645;
+    text-decoration: line-through;
+    font-size: 25px;
+    list-style-type: none;
+}
+.uncheck{
+    text-decoration: none;
+    background-color: #344CB7;
+}
