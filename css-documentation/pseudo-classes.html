@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-classes</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: red;
+        border: 1px solid green;
+        padding: 8px 16px;
+        margin: 5px;
+        display: inline-block;
+      }
+      a:link {
+        /*Daha önce açılmamış linklerin rengini tanımlamak için kullanılır. */
+        background-color: brown;
+      }
+      a:visited {
+        /*Seçtiğimiz elemanın tıklandıktan sonraki rengini tanımlar. Bir linke tıkladıktan sonra rengini değiştirmek istediğimizde kullanılan seçicidir.*/
+        color: #fff;
+        background-color: blueviolet;
+      }
+      a:hover {
+        /*Seçtiğimiz elemanın üzerine mouse ile geldiğimizde Css kodları çalışır, mouse ile elemanın üzerinden ayrıldığımızda kodlar çalışmaz.*/
+        color: #fff;
+        background-color: darkolivegreen;
+      }
+      a:active {
+        /*Seçtiğimiz eleman aktif olduğunda yani üzerine tıklanmış olduğu durumda iken kodlarımızın çalışır. Yani Mouse sol tuşa bastığımızda çalışır, mouse sol tuşu basmayı bıraktığımızda kodlar pasif olur.*/
+        color: red;
+        background-color: #fff;
+      }
+      div {
+        margin-top: 5px;
+      }
+      div:hover p {
+        display: block;
+      }
+      p {
+        display: none;
+        background-color: darkkhaki;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Pseudo-classes -->
+    <a href="https://www.google.com.tr/" target="_blank">Google</a>
+    <a href="https://www.youtube.com/">Youtube</a>
+    <a href="https://github.com/Dursunipek">Github</a>
+    <!-- Sadece linkler için kullanılmaz farklı bir kullanım örneği -->
+    <div>
+      Click Here !!!!
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia quam
+        dolorum cupiditate, quis dolore quae nisi quod optio voluptatibus
+        debitis accusamus. Voluptatibus quaerat, fuga nesciunt quidem iure
+        dicta. Cupiditate placeat totam aspernatur quisquam praesentium nobis
+        iure vitae vero odit ut.
+      </p>
+    </div>
+  </body>
+</html>
