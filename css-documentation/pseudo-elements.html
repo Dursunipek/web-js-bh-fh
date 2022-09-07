@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Elements</title>
+    <style>
+      p {
+        font-size: 20px;
+      }
+      p::first-line {
+        /*P etiketlerinde ilk satıra uygulanacak css kodları*/
+        color: red;
+        letter-spacing: 2px; /*Paragraf içerisindeki harfler arasındaki boşluk*/
+        word-spacing: 3px; /*Paragraf içerisindeki kelimeler arasındaki boşluk*/
+        font-weight: bold; /*Yazı kalınlığı*/
+      }
+      p.about::first-line {
+        /*About klası taşıyan p etiketlerine uygulanacak css kodları*/
+        color: green;
+      }
+      p::first-letter {
+        /*P etiketlerindeki ilk harfe uygulanacak css kodları*/
+        font-size: 40px;
+      }
+      p::after {
+        /*P etiketinden sonra uygulanacak css kodları*/
+        content: "\1F601"; /*Eklenecek emoji content property'si ile ekliyoruz*/
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Pseudo Elements -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, impedit
+      error. Quibusdam quam distinctio qui ipsum nihil sit suscipit
+      perspiciatis! Consectetur, nisi! Delectus nihil dolore commodi consectetur
+      reprehenderit, recusandae animi nobis laboriosam tempora rem dicta.
+      Minima, fugit. Unde ducimus maxime qui quos minus quisquam optio odit!
+      Incidunt beatae est corporis.
+    </p>
+    <p class="about">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo perferendis
+      nisi repellendus magni ut minus sed quaerat rem esse temporibus!
+      Consectetur exercitationem qui saepe eligendi, unde, modi fugiat facilis,
+      illum nemo voluptatibus magnam. Assumenda nisi quia quae nesciunt esse
+      inventore eius consectetur quo, odit minus, corrupti doloremque maxime
+      excepturi minima!
+    </p>
+  </body>
+</html>
