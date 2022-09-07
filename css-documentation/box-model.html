@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        font-size: 30px;
+        box-sizing: border-box;
+        /* Box-sizing default olarak content-box'dır. */
+        /* Ancak content box width değeri 100% verildiği durumlarda padding ve border width değerlerini hesaplamaz ve yüzdenin dışına taşar */
+        /* Bu nedenle tüm sayfa için border-box kullanmalıyız */
+        /* Border box padding ve border değerleri dahil edilerek yüzdenin içine sığdırır  */
+      }
+      #tag-1 {
+        background-color: #a44a3f;
+        text-align: center;
+        /* margin: (tüm köşeler ortak değer)px; */
+        /* margin: 20px; */
+        /* Margin farklı şekillerde de yazılabilir */
+        /* margin: top right bottom left; */
+        /* margin: 25px 25px 25px 25px; */
+        /* margin: (Top-bottom ortak değer)px (right-left ortak değer)px; */
+        margin: 20px 20px;
+        /* border: (border-width) (border-style) (border-color); */
+        border: 5px solid #f19c79;
+        /* border-top-style: solid; */
+        /* border-top-width: 5px; */
+        /* border-top-color: #f19c79; */
+        /* Border detaylı bir şekilde yazılabilir */
+        height: 300px;
+      }
+      #tag-2 {
+        text-align: center;
+        background-color: #cbdfbd;
+        /* margin-top: 30px; */
+        /* margin-right: 20px; */
+        /* margin-bottom: 20px; */
+        /* margin-left: 20px; */
+        /*margin: auto; Eşit bir şekilde kalan boşlukları böler ve ortalar */
+        width: 500px;
+        margin: 100px auto; /*Üstten altan 100px sağ ve sol auto(eşit bölünür) */
+        border: 5px solid #f19c79;
+      }
+      nav {
+        background-color: #f6f4d2;
+        padding: 50px;
+      }
+      a {
+        /* padding-left: 10px; */
+        /* padding-top: 10px; */
+        padding: 10px;
+        background-color: #d4e09b;
+        text-decoration: none;
+        border: 5px solid #f19c79;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        --Css'des her bir etiket için oluşturulan bir kutu modeli vardır.
+        --Bu kutu modelinin browser default değerleri vardır
+        --Border,margin,padding değerlerini değiştirerek kendi istediğimiz doğrultusunda bir kutu oluşturabiliriz
+     -->
+    <!-- border: Kutunun kenar çizgileri -->
+    <!-- padding: Kenar çizgileri ile nesne arasındaki mesafe -->
+    <!-- margin: Kenar çizgileri ile dışarıdaki bir nesne arasındaki mesafe -->
+    <!-- Margin Collapsing: 2 etiket yan yana geldiğinde margin değeri yüksek olan diğerinin margin değerini ezer.
+        2 etiketin margin değeri toplanmaz büyük olanın margin değeri kadar mesafe koyulur -->
+    <!-- Block elemanlar herhangi bir değer verilmediği sürece tüm satırı kaplar -->
+    <!-- Alttaki elemanlar varsayılan olarak %100 height kaplar -->
+    <!-- Container etiketler içerisindeki içerik kadar yükseklik kaplar -->
+    <nav>
+      <a href="">Homepage</a>
+      <a href="">Login</a>
+      <a href="">Contact</a>
+    </nav>
+    <main>
+      <section id="tag-1"><h1>Welcame To Homapage</h1></section>
+      <section id="tag-2"><h2>Padding, Border, Margin</h2></section>
+    </main>
+  </body>
+</html>
