@@ -32,7 +32,6 @@
   color: #e26d5c;
 }
 .main-nav__item--login a:hover {
-  background-color: #c9cba3;
   border-color: #e26d5c;
   color: #e26d5c;
 }
@@ -53,18 +52,19 @@
   font-size: 70px;
 }
 .info {
-  background-color: #c9cba3;
+  background-color: #ffe1a8;
   text-align: center;
   padding: 10px;
 }
 .row {
   margin-bottom: 30px;
 }
-.col {
+.col-3 {
   display: inline-block;
   width: 30%;
   padding: 8px;
   margin: 10px;
+  vertical-align: top;
 }
 .row h2 {
   color: #e26d5c;
@@ -72,7 +72,46 @@
   font-size: 30px;
 }
 .icon-box h3 {
-    font-size: 25px;
+  font-size: 25px;
   font-weight: 500;
   color: #e26d5c;
+}
+.feature {
+  background-color: #e26d5c;
+}
+.col-2 {
+  width: calc(50% - 2px);
+  height: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+.feature__left {
+  background-image: url(images/feature-image.jpg);
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+.feature__right {
+  padding: 40px;
+}
+.feature__right h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.feature__right a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  border: 3px solid #ffe1a8;
+  border-radius: 8px; 
+  background-color: #ffe1a8;;
+  color: #e26d5c;
+  padding: 8px 16px;
+}
+.feature__right a:hover{
+  background-color: #e26d5c;
+  color:#ffe1a8;
+  border: 3px solid #ffe1a8;
 }
