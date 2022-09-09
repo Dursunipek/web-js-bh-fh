@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating app</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-header {
+        background-color: #80558c;
+        padding: 32px 24px;
+      }
+      .main-header h1 {
+        color: #e4d192;
+      }
+      .main-section__aside {
+        float: left;
+        width: 33%;
+        padding: 15px;
+      }
+      .main-section__aside ul {
+        list-style-type: none;
+      }
+      .main-section__aside li a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 3px;
+        color: #e4d192;
+        display: inline-block;
+        width: 100%;
+        background-color: #80558c;
+        margin-bottom: 10px;
+        padding: 2px 10px;
+      }
+      .main-section__main {
+        width: 66%;
+        float: left;
+        padding: 10px;
+      }
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      .main-footer {
+        background-color: #80558c;
+        padding: 32px 24px;
+      }
+      .main-footer h2 {
+        color: #e4d192;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Header</h1>
+    </header>
+    <section class="main-section  clearfix">
+      <aside class="main-section__aside">
+        <ul>
+          <li><a href="#">Html</a></li>
+          <li><a href="#">Css</a></li>
+          <li><a href="#">Javascript</a></li>
+        </ul>
+      </aside>
+      <main class="main-section__main">
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          est.
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa
+          earum repellendus accusantium! Unde similique ratione sed architecto
+          vitae porro laudantium laboriosam voluptatem, nihil fugiat veniam
+          repudiandae et possimus alias maxime quas nobis numquam, beatae ullam
+          accusamus magni cum cumque id! Ipsa iusto quod fugiat suscipit
+          molestias repudiandae quasi nemo ad nulla! Ratione iste deserunt
+          corporis eaque nam culpa unde?
+          <br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nostrum, beatae quas reiciendis at deserunt, dicta vitae itaque eveniet veritatis quam? Nobis rerum ut praesentium iure necessitatibus, perspiciatis amet aperiam, quos natus aliquid veniam dolores deserunt voluptas soluta architecto ad optio. Dicta dignissimos perferendis fugit obcaecati architecto aut nobis earum.
+        </p>
+      </main>
+    </section>
+    <footer class="main-footer">
+      <h2>Footer</h2>
+    </footer>
+  </body>
+</html>
