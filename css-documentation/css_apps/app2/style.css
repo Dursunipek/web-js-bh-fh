@@ -105,13 +105,37 @@
   margin-top: 10px;
   display: inline-block;
   border: 3px solid #ffe1a8;
-  border-radius: 8px; 
-  background-color: #ffe1a8;;
+  border-radius: 8px;
+  background-color: #ffe1a8;
   color: #e26d5c;
   padding: 8px 16px;
 }
-.feature__right a:hover{
+.feature__right a:hover {
   background-color: #e26d5c;
-  color:#ffe1a8;
+  color: #ffe1a8;
   border: 3px solid #ffe1a8;
+}
+.section-title {
+  text-align: center;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+#plans{
+  background-color: #ffe1a8;
+}
+.plan {
+  float: left;
+  text-align: center;
+  background:#e26d5c  ;
+  padding:8px;
+  width: 32.9%;
+  border-radius: 20px;
+  margin: 2px;
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
 }
