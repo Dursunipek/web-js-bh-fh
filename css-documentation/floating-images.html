@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating images</title>
+    <style>
+      p {
+        border: 2px solid red;
+      }
+      img {
+        width: 300px;
+        float: left;
+        margin-right: 10px;
+      }
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem
+      explicabo est libero odio totam. Corrupti et laborum quaerat consectetur
+      est error illum labore eius mollitia possimus illo aliquam eligendi
+      officiis a totam commodi, ea consequatur atque! Commodi veniam qui aut?
+    </p>
+    <p class="clearfix">
+      <img src="images/rowing.jpeg" />
+      <span>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ad
+        nostrum placeat illum molestiae quod obcaecati pariatur corporis fugiat
+        dignissimos molestias, accusamus soluta, facere dolore earum repellendus
+        tempore eius quisquam reiciendis deleniti! Autem commodi mollitia ex
+        reprehenderit! Nesciunt dicta eligendi ab voluptas perspiciatis
+        aspernatur deleniti in hic quaerat dolorum! Beatae, quia tempore
+        voluptatibus quasi expedita rem sed ipsam quibusdam voluptatem
+        distinctio fugit dolorem aspernatur inventore repudiandae dolore sequi
+        nulla esse.
+      </span>
+      <span>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ad
+        nostrum placeat illum molestiae quod obcaecati pariatur corporis fugiat
+        dignissimos molestias, accusamus soluta, facere dolore earum repellendus
+        tempore eius quisquam reiciendis deleniti! Autem commodi mollitia ex
+        reprehenderit! Nesciunt dicta eligendi ab voluptas perspiciatis
+        aspernatur deleniti in hic quaerat dolorum! Beatae, quia tempore
+        voluptatibus quasi expedita rem sed ipsam quibusdam voluptatem
+        distinctio fugit dolorem aspernatur inventore repudiandae dolore sequi
+        nulla esse.
+      </span>
+    </p>
+  </body>
+</html>
