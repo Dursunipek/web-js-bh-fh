@@ -134,8 +134,22 @@
 }
 .inner-plan {
   background: #e26d5c;
-  padding: 5px;
+  padding: 8px 8px;
   border-radius: 20px;
+}
+.plan__badge {
+  padding: 5px;
+  color: #fcf8e8;
+  background-color: #94b49f;
+  border-radius: 20px;
+}
+.recommended_plan {
+  background-color: #76549a;
+}
+.plan__features{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .clearfix::after {
   display: block;
