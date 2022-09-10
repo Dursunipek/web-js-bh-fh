@@ -6,6 +6,7 @@
     cursor: pointer;
     border: none;
     display: inline-block;
+    transition-duration: .6s;
   }
   .btn-primary {
     background-color: #6a67ce;

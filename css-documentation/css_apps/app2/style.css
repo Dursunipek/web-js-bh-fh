@@ -136,6 +136,11 @@
   background: #e26d5c;
   padding: 8px 8px;
   border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+  transition: box-shadow .6s;
+}
+.inner-plan:hover{
+  box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
 }
 .plan__badge {
   padding: 5px;
