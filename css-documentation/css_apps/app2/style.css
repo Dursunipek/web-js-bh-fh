@@ -151,6 +151,10 @@
   margin: 0;
   padding: 0;
 }
+.plan__features li{
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
 .clearfix::after {
   display: block;
   content: "";

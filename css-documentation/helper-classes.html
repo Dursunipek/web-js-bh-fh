@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helper Classes</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .btn {
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 8px 16px;
+        cursor: pointer;
+        border: none;
+        display: inline-block;
+      }
+      .btn-primary {
+        background-color: #6a67ce;
+        color: #fff;
+        border-radius: 7px;
+        border: 2px solid #6a67ce;
+      }
+      .btn-primary:hover {
+        background-color: #fff;
+        color: #6a67ce;
+        border-radius: 7px;
+        border: 2px solid #6a67ce;
+      }
+      .btn-secondary {
+        background-color: #b689c0;
+        color: #fff;
+        border-radius: 7px;
+        border: 2px solid #b689c0;
+      }
+      .btn-secondary:hover {
+        background-color: #fff;
+        color: #b689c0;
+        border-radius: 7px;
+        border: 2px solid #b689c0;
+      }
+      .btn-outline-primary {
+        background-color: #fff;
+        color: #6a67ce;
+        border-radius: 7px;
+        border: 2px solid #6a67ce;
+      }
+      .btn-outline-primary:hover {
+        background-color: #6a67ce;
+        color: #fff;
+        border-radius: 7px;
+        border: 2px solid #6a67ce;
+      }
+      .btn-outline-secondary {
+        background-color: #fff;
+        color: #b689c0;
+        border-radius: 7px;
+        border: 2px solid #b689c0;
+      }
+      .btn-outline-secondary:hover {
+        background-color: #b689c0;
+        color: #fff;
+        border-radius: 7px;
+        border: 2px solid #b689c0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Helper classes içerisinde tekrar tekrar kullanıcağımız class'lar oluşturabiliriz -->
+    <!-- Bu örnekte tekrar tekrar kullanılacak butonlar tek bir css dosyasında oluşturularak özellikler farklı class'lara atanmıştır -->
+    <a href="#" class="btn btn-primary">Button</a>
+    <a href="#" class="btn btn-secondary">Button</a>
+    <br /><br />
+    <a href="#" class="btn btn-outline-primary">Button</a>
+    <a href="#" class="btn btn-outline-secondary">Button</a>
+  </body>
+</html>
