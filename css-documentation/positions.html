@@ -8,10 +8,11 @@
     <style>
       * {
         box-sizing: border-box;
+        margin: 0;
       }
       .container {
-        margin-top: 50px;
         position: relative;
+        height: 2000px;
       }
       .box {
         border: 5px solid #888888;
@@ -20,18 +21,24 @@
       }
       .navbar {
         background-color: blueviolet;
+        position: fixed;
+        top: 0;
+        width: 100%;
       }
       .content {
         background-color: bisque;
-        position: absolute;
-        top: 0;
-        left: 500px;
+        margin-top: 75px;
       }
       .footer {
         background-color: darkorange;
-        position: relative;
-        top: 50px;
-        left: 50px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
       }
     </style>
   </head>
@@ -40,9 +47,75 @@
     <!-- Static: Var olan akış içerisinde kalır.  Top,left,right gibi değerler etki etmez -->
     <!-- Relative: Var olan akış içerisinde kalır ancak top,left gibi değerleri akış içerisinde bulunduğu konumdan alır. -->
     <!-- Absolute: Var olan akış içerisinde görünmez, diğer elemanlar bu elemanı görmezden gelir  ve top,left,right  konumlanmasını bir üstünde bulunan ilk relative class'a göre yapar -->
+    <!-- Fixed: Viewport(ekranın görünen kısmı) üzerinde bir şey sabitlemek istiyorsak kullanabiliriz. Fixed nesneler akışdan çıkar ve içerik kadar yer kaplar -->
+    <!-- Sticky: Fixed gibi belirlenen nesnenin viewport'ta kalmasını sağlar ancak biraz farklıdır. İçerik üzerine gelindiğine sınırların dışına çıkmadan viewport'ta kalmaya devam edilir. Akış dışına çıkmaz mevcut bir konumu vardır -->
     <div class="container">
       <div class="box navbar"><h1>Navbar</h1></div>
       <div class="box content"><h1>Content</h1></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+        similique quibusdam eius mollitia dolorum praesentium, soluta qui
+        voluptatem reiciendis saepe recusandae explicabo nesciunt nobis optio.
+        Adipisci earum impedit odit magni inventore, id doloremque.
+        Reprehenderit pariatur similique at iure id voluptatem sint quaerat,
+        nemo tempore maxime est, saepe possimus. Eum vitae quibusdam porro quod
+        corrupti accusantium itaque architecto unde repudiandae, praesentium
+        culpa fugiat commodi consequatur alias a cumque quisquam maiores nisi!
+        Praesentium voluptate impedit soluta excepturi fuga maiores odio,
+        accusamus nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Corrupti labore consequuntur ducimus at magnam quas voluptatem
+        nisi laborum provident ipsam incidunt harum impedit earum ab velit modi
+        ullam molestiae fuga architecto, dolores pariatur? Porro debitis nulla
+        ipsum aliquam facilis, pariatur, nisi perferendis cupiditate doloremque,
+        velit distinctio quaerat! Laboriosam ad obcaecati deleniti dolor ut
+        excepturi nobis corporis sunt reiciendis dolorem! Quaerat esse similique
+        et veritatis ullam. Fugiat itaque quasi distinctio quas neque recusandae
+        dolores officiis ab accusantium cumque. Enim, voluptas veniam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+        similique quibusdam eius mollitia dolorum praesentium, soluta qui
+        voluptatem reiciendis saepe recusandae explicabo nesciunt nobis optio.
+        Adipisci earum impedit odit magni inventore, id doloremque.
+        Reprehenderit pariatur similique at iure id voluptatem sint quaerat,
+        nemo tempore maxime est, saepe possimus. Eum vitae quibusdam porro quod
+        corrupti accusantium itaque architecto unde repudiandae, praesentium
+        culpa fugiat commodi consequatur alias a cumque quisquam maiores nisi!
+        Praesentium voluptate impedit soluta excepturi fuga maiores odio,
+        accusamus nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Corrupti labore consequuntur ducimus at magnam quas voluptatem
+        nisi laborum provident ipsam incidunt harum impedit earum ab velit modi
+        ullam molestiae fuga architecto, dolores pariatur? Porro debitis nulla
+        ipsum aliquam facilis, pariatur, nisi perferendis cupiditate doloremque,
+        velit distinctio quaerat! Laboriosam ad obcaecati deleniti dolor ut
+        excepturi nobis corporis sunt reiciendis dolorem! Quaerat esse similique
+        et veritatis ullam. Fugiat itaque quasi distinctio quas neque recusandae
+        dolores officiis ab accusantium cumque. Enim, voluptas veniam.
+      </p>
+      <h2 class="sticky" style="background-color:red;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+        commodi!
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+        similique quibusdam eius mollitia dolorum praesentium, soluta qui
+        voluptatem reiciendis saepe recusandae explicabo nesciunt nobis optio.
+        Adipisci earum impedit odit magni inventore, id doloremque.
+        Reprehenderit pariatur similique at iure id voluptatem sint quaerat,
+        nemo tempore maxime est, saepe possimus. Eum vitae quibusdam porro quod
+        corrupti accusantium itaque architecto unde repudiandae, praesentium
+        culpa fugiat commodi consequatur alias a cumque quisquam maiores nisi!
+        Praesentium voluptate impedit soluta excepturi fuga maiores odio,
+        accusamus nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Corrupti labore consequuntur ducimus at magnam quas voluptatem
+        nisi laborum provident ipsam incidunt harum impedit earum ab velit modi
+        ullam molestiae fuga architecto, dolores pariatur? Porro debitis nulla
+        ipsum aliquam facilis, pariatur, nisi perferendis cupiditate doloremque,
+        velit distinctio quaerat! Laboriosam ad obcaecati deleniti dolor ut
+        excepturi nobis corporis sunt reiciendis dolorem! Quaerat esse similique
+        et veritatis ullam. Fugiat itaque quasi distinctio quas neque recusandae
+        dolores officiis ab accusantium cumque. Enim, voluptas veniam.
+      </p>
       <div class="box footer"><h1>Footer</h1></div>
     </div>
   </body>
