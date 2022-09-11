@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positions</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        margin-top: 50px;
+        position: relative;
+      }
+      .box {
+        border: 5px solid #888888;
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+      .navbar {
+        background-color: blueviolet;
+      }
+      .content {
+        background-color: bisque;
+        position: absolute;
+        top: 0;
+        left: 500px;
+      }
+      .footer {
+        background-color: darkorange;
+        position: relative;
+        top: 50px;
+        left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Positions: static | relative | absolute | sticky | fixed -->
+    <!-- Static: Var olan akış içerisinde kalır.  Top,left,right gibi değerler etki etmez -->
+    <!-- Relative: Var olan akış içerisinde kalır ancak top,left gibi değerleri akış içerisinde bulunduğu konumdan alır. -->
+    <!-- Absolute: Var olan akış içerisinde görünmez, diğer elemanlar bu elemanı görmezden gelir  ve top,left,right  konumlanmasını bir üstünde bulunan ilk relative class'a göre yapar -->
+    <div class="container">
+      <div class="box navbar"><h1>Navbar</h1></div>
+      <div class="box content"><h1>Content</h1></div>
+      <div class="box footer"><h1>Footer</h1></div>
+    </div>
+  </body>
+</html>
