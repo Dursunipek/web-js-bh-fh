@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -10,6 +13,18 @@
 .main {
   background-color: #ffe1a8;
   padding: 8px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.main-line {
+  height: 5px;
+  background-color: #723d46;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: 8px;
 }
 .main-nav {
   display: inline-block;
@@ -45,6 +60,7 @@
   background-image: url("images/background-img.jpg");
   background-position: bottom center;
   position: relative;
+  margin-top: 63px;
 }
 .showcase h1 {
   margin: 0;
@@ -53,7 +69,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%)
+  transform: translate(-50%, -50%);
 }
 .info {
   background-color: #ffe1a8;
@@ -76,7 +92,7 @@
   font-size: 30px;
   text-align: center;
   padding-top: 10px;
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
 .icon-box h3 {
   font-size: 25px;
@@ -141,9 +157,9 @@
   padding: 8px 8px;
   border-radius: 20px;
   box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
-  transition: box-shadow .6s;
+  transition: box-shadow 0.6s;
 }
-.inner-plan:hover{
+.inner-plan:hover {
   box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
 }
 .plan__badge {
@@ -155,14 +171,14 @@
 .recommended_plan {
   background-color: #76549a;
   position: relative;
-  bottom:15px;
+  bottom: 15px;
 }
-.plan__features{
+.plan__features {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.plan__features li{
+.plan__features li {
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
@@ -170,4 +186,19 @@
   display: block;
   content: "";
   clear: both;
+}
+#backtotop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+}
+#backtotop i {
+  color: #521f28;
+  opacity: 0.75;
+  font-size: 35px;
+  transition: color 0.5s;
+}
+#backtotop i:hover {
+  opacity: 1;
 }
