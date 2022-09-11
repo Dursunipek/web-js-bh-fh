@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors</title>
+    <style>
+      div {
+        height: 150px;
+        border: 2px solid #888888;
+        margin-bottom: 10px;
+      }
+      .box1 {
+        background: rgb(255, 0, 0, 1);
+      }
+      .box2 {
+        background: rgb(255, 0, 0, 0.6);
+      }
+      .box3 {
+        background: rgba(255, 0, 0, 0.2);
+      }
+      .box4 {
+        background-color: #0000ff;
+      }
+      .box4:hover {
+        background-color: #0000ff;
+        opacity: 0.5;
+      }
+      .box5 {
+        background: rgb(128, 128, 128);
+      }
+      .box5:hover {
+        background: rgb(128, 128, 128);
+        opacity: 0.5;
+        transition: 0.7s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Renk kodlarının farklı gösterim şekilleri vardır ancak temel R,G,B kodlarından oluşur -->
+    <!-- r-> red , g-> green, b->blue -->
+    <!-- Rgb(r,g,b) -> renk kodları için bir fonksiyon hexadecimal karşılığı #rrggbb'dur -->
+    <!-- rgba(r,g,b,o)-> rgb ile benzer bir fonksiyon ancak içerisindeki alfa değeri opacitiy değerini ifade eder -->
+    <!-- Opacity: renk saydamlığı olarak ifade edilebilir max değer 1 min değer 0 dır. Min değer alırsa renk görülmez -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+  </body>
+</html>
