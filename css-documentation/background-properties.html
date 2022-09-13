@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      #header {
+        background-image: linear-gradient(
+            to bottom right,
+            rgba(204, 204, 204, 0.6),
+            rgba(98, 206, 157, 0.6)
+          ),
+          url("images/bg.jpg");
+        /* background-image 2 parametre alabilir. Mevcut fotoğraf üstüne opacity'si düşük bir gradient eklenebilir */
+        height: 100vh;
+        background-position: center; /*Konumlandırma sol üst köşeye göre yapılır*/
+        background-size:cover;
+        /* background-repeat: no-repeat; Resmin artan kısımlardan tekrar etmesini engeller.  */
+        /* background-position: Yatayda ve dikeyde 2 adet parametre alır. Farklı farklı parametreler pixel'ler yada oranlar verilebilir */
+        position: relative;
+      }
+      .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 150px;
+      }
+      #header h1 {
+        margin: 0;
+        font-size: 60px;
+        color: rgb(32, 32, 32);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .content {
+        background-color: burlywood;
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Background Text</h1>
+      <img class="logo" src="images/logo.png" alt="logo" />
+    </div>
+    <div class="content"></div>
+  </body>
+</html>
