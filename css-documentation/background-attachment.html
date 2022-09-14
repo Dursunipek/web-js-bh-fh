@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Attachment - Parallax Scrolling Effect</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .bg {
+        position: relative;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .bg-image1 {
+        background-image: url("images/bg-2.jpeg");
+      }
+      .bg-image2 {
+        background-image: url("images/bg-3.jpeg");
+        height: 50vh;
+        margin-top: 10px;
+      }
+      .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(23, 23, 23);
+        color: #fff;
+        font-size: 33px;
+        padding: 8px 16px;
+        letter-spacing: 5px;
+      }
+      .content {
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg bg-image1">
+      <h1 class="caption">Lorem ipsum dolor</h1>
+    </div>
+    <div class="content">
+      <section>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas
+          laboriosam eos consequatur amet commodi esse ducimus maiores
+          doloremque? Earum voluptatibus magnam iure cum accusantium quod
+          doloremque quidem architecto quisquam quas excepturi quae, vel amet
+          sed dolor debitis praesentium perferendis, nisi ut alias hic magni
+          modi! Cum blanditiis debitis quod in corporis, quibusdam impedit.
+          Delectus, aperiam, voluptatem esse quod quasi magni, nemo doloremque
+          ad consectetur vitae rerum sint. Doloribus modi, magni rerum soluta
+          magnam iure excepturi consectetur nesciunt deleniti impedit corporis
+          ipsa libero est dicta nihil natus necessitatibus obcaecati praesentium
+          placeat sed ab ipsam! Cupiditate ipsum dolor ab. Nesciunt, ipsum?
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas
+          laboriosam eos consequatur amet commodi esse ducimus maiores
+          doloremque? Earum voluptatibus magnam iure cum accusantium quod
+          doloremque quidem architecto quisquam quas excepturi quae, vel amet
+          sed dolor debitis praesentium perferendis, nisi ut alias hic magni
+          modi! Cum blanditiis debitis quod in corporis, quibusdam impedit.
+          Delectus, aperiam, voluptatem esse quod quasi magni, nemo doloremque
+          ad consectetur vitae rerum sint. Doloribus modi, magni rerum soluta
+          magnam iure excepturi consectetur nesciunt deleniti impedit corporis
+          ipsa libero est dicta nihil natus necessitatibus obcaecati praesentium
+          placeat sed ab ipsam! Cupiditate ipsum dolor ab. Nesciunt, ipsum?
+        </p>
+        <div class="bg bg-image2">
+          <h1 class="caption">Lorem ipsum dolor sit amet</h1>
+        </div>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas
+          laboriosam eos consequatur amet commodi esse ducimus maiores
+          doloremque? Earum voluptatibus magnam iure cum accusantium quod
+          doloremque quidem architecto quisquam quas excepturi quae, vel amet
+          sed dolor debitis praesentium perferendis, nisi ut alias hic magni
+          modi! Cum blanditiis debitis quod in corporis, quibusdam impedit.
+          Delectus, aperiam, voluptatem esse quod quasi magni, nemo doloremque
+          ad consectetur vitae rerum sint. Doloribus modi, magni rerum soluta
+          magnam iure excepturi consectetur nesciunt deleniti impedit corporis
+          ipsa libero est dicta nihil natus necessitatibus obcaecati praesentium
+          placeat sed ab ipsam! Cupiditate ipsum dolor ab. Nesciunt, ipsum?
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas
+          laboriosam eos consequatur amet commodi esse ducimus maiores
+          doloremque? Earum voluptatibus magnam iure cum accusantium quod
+          doloremque quidem architecto quisquam quas excepturi quae, vel amet
+          sed dolor debitis praesentium perferendis, nisi ut alias hic magni
+          modi! Cum blanditiis debitis quod in corporis, quibusdam impedit.
+          Delectus, aperiam, voluptatem esse quod quasi magni, nemo doloremque
+          ad consectetur vitae rerum sint. Doloribus modi, magni rerum soluta
+          magnam iure excepturi consectetur nesciunt deleniti impedit corporis
+          ipsa libero est dicta nihil natus necessitatibus obcaecati praesentium
+          placeat sed ab ipsam! Cupiditate ipsum dolor ab. Nesciunt, ipsum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas
+          laboriosam eos consequatur amet commodi esse ducimus maiores
+          doloremque? Earum voluptatibus magnam iure cum accusantium quod
+          doloremque quidem architecto quisquam quas excepturi quae, vel amet
+          sed dolor debitis praesentium perferendis, nisi ut alias hic magni
+          modi! Cum blanditiis debitis quod in corporis, quibusdam impedit.
+          Delectus, aperiam, voluptatem esse quod quasi magni, nemo doloremque
+          ad consectetur vitae rerum sint. Doloribus modi, magni rerum soluta
+          magnam iure excepturi consectetur nesciunt deleniti impedit corporis
+          ipsa libero est dicta nihil natus necessitatibus obcaecati praesentium
+          placeat sed ab ipsam! Cupiditate ipsum dolor ab. Nesciunt, ipsum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse nam
+          sit quasi, obcaecati omnis ipsum magnam minima quo delectus sunt ex
+          quas quod, nostrum voluptas! Vitae, earum praesentium! Nihil atque
+          repudiandae doloremque iste expedita tenetur accusamus animi doloribus
+          magnam amet minima, at nostrum sit, quaerat eaque dolore non mollitia?
+          Fugit qui architecto laboriosam dolores, optio quo error totam, illo
+          atque vero quia vitae voluptatibus quod a aliquid! Eum sit blanditiis
+          neque officia sint maiores, quia id laborum, tempore illo fugit ex
+          illum dignissimos. Mollitia alias dolores ab amet a beatae sed
+          quisquam quos ducimus. Sequi harum maiores alias provident incidunt
+          soluta, vitae architecto maxime, rerum impedit magni mollitia suscipit
+          nihil, cum laudantium. Quidem ipsum, provident deleniti minima fugit
+          delectus excepturi, beatae architecto commodi reiciendis laboriosam,
+          temporibus ex recusandae quasi asperiores doloremque! A, asperiores.
+          Recusandae vel, consequuntur necessitatibus ratione vero earum aliquam
+          enim sunt maxime sed quidem, libero deserunt a laudantium esse
+          suscipit aspernatur ipsum amet dolorem iusto, sint quam. Temporibus
+          nisi dolorum sunt quam dolorem in quisquam tenetur architecto
+          accusamus fuga alias perferendis facere, dignissimos atque vero
+          voluptatum nam excepturi placeat ex minus eos odio ipsa ducimus
+          doloribus. Repudiandae, debitis consequatur? Modi enim voluptates
+          eveniet repudiandae eius cupiditate commodi.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
