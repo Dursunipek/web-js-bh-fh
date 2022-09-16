@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- DOM -> Document Object Model -->
+    <!-- Herhangi bir html sayfası üzerindeki etiketleri kullanmaya olanak sağlayan yapı -->
+    <!-- Her bir obje üzerinde belirli metodlar vardır ve bunlara ulaşmayı sağlar -->
+    <div class="card-header">
+      <h3 class="card-title h1" id="title">Todo App 2</h3>
+    </div>
+    <ul>
+      <li>li - 1</li>
+      <li>li - 2</li>
+      <li>li - 3</li>
+      <li>li - 4</li>
+    </ul>
+    <script>
+      result = document.getElementById("title");
+      result = document.getElementById("title").id;
+      result = document.getElementById("title").className;
+      result = document.getElementById("title").classList;
+      result = document.getElementById("title").classList[0];
+      result = document.getElementById("title").classList[1];
+
+      document.getElementById("title").style.fontSize = "40px";
+      document.getElementById("title").style.color = "blue";
+      document.getElementById("title").style.letterSpacing = "5px";
+
+      document.getElementById("title").innerText = "Todo List"; // Sadece text üzerinde değişiklik yapabilirz
+      document.getElementById("title").innerHTML = "<p>Todo List</p>"; // Etiket ile değişiklik yapabiliriz
+
+      // getElementById ile sadece id üzerinden erişim yapabiliyoruz ancak farklı bir metod ile class, id yada etiket adı üzerinden erişim sağlayabilriz
+      result = document.querySelector(".card-header");
+      result = document.querySelector("div");
+
+      // Aynı etiket üzerinden farklı selector'ları seçmemiz gerekebilir
+      result = document.querySelector("li");
+      result = document.querySelector("li:first-child");
+      result = document.querySelector("li:last-child");
+      result = document.querySelector("li:nth-child(3)");
+      
+      console.log(result);
+    </script>
+  </body>
+</html>
