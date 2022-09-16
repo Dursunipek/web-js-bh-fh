@@ -119,7 +119,7 @@ main {
 }
 
 .row {
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .row::after {
@@ -297,4 +297,45 @@ main {
 }
 .card-image{
     max-height: 350px;
+}
+footer{
+    background-color: #2e4c6d;
+    padding: 30px;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+footer ul{
+    margin: 0;
+    padding: 0;
+}
+footer ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 5px;
+}
+.social-links{
+    text-align: right;
+}
+.fab{
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 50%;
+}
+.fab:hover{
+    opacity: 0.4;
+}
+.fa-facebook{
+    background-color: #3B5998;
+    color: #fff;
+}
+.fa-twitter{
+    background-color: #55ACEE;
+    color: #fff;
+}
+.fa-instagram{
+    background-color: #125688;
+    color: #fff;
 }
