@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="task-list">
+        <li class="task">Task-1</li>
+        <li class="task">Task-2</li>
+        <li class="task">Task-3</li>
+    </ul>
+    <ul id="task-list2">
+        <li class="task">Task-1</li>
+        <li class="task">Task-2</li>
+        <li class="task">Task-3</li>
+    </ul>
+    <script>
+        let taskList = document.getElementsByClassName("task");
+        // taskList = document.getElementsByClassName("task")[0];
+        // taskList = document.getElementsByClassName("task")[1];
+        
+        for(let task of taskList){
+            task.style.color = "red";
+            task.style.fontSize = "30px";
+            // console.log(task);
+        }
+        ul = document.getElementById("task-list");
+        taskList = ul.getElementsByTagName("li");
+        taskList[0].style.color = "blue";
+        console.log(taskList)
+        
+        // console.log(result);
+    </script>
+</body>
+</html>
