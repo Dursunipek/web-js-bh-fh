@@ -1,3 +1,7 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("buttons.css");
+
 * {
   box-sizing: border-box;
 }
@@ -119,7 +123,7 @@ main {
 }
 
 .row {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .row::after {
@@ -278,64 +282,64 @@ main {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
 }
-.card-body{
-    padding: 30px;
+.card-body {
+  padding: 30px;
 }
-.img-fluid{
-    width: 100%;
+.img-fluid {
+  width: 100%;
 }
-.card-container{
-    padding:10px;
-    position: relative;
-    transition: all 0.3s;
-    top: 0;
+.card-container {
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s;
+  top: 0;
 }
-.card-container:hover{
-    /* top: -15px; */
-    /* Alternatif yöntem */
-    transform: translateY(-10px)
+.card-container:hover {
+  /* top: -15px; */
+  /* Alternatif yöntem */
+  transform: translateY(-10px);
 }
-.card-image{
-    max-height: 350px;
+.card-image {
+  max-height: 350px;
 }
-footer{
-    background-color: #2e4c6d;
-    padding: 30px;
+footer {
+  background-color: #2e4c6d;
+  padding: 30px;
 }
-footer a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
 }
-footer ul{
-    margin: 0;
-    padding: 0;
+footer ul {
+  margin: 0;
+  padding: 0;
 }
-footer ul li{
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 5px;
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
 }
-.social-links{
-    text-align: right;
+.social-links {
+  text-align: right;
 }
-.fab{
-    padding: 10px;
-    font-size: 25px;
-    border-radius: 50%;
+.fab {
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 50%;
 }
-.fab:hover{
-    opacity: 0.4;
+.fab:hover {
+  opacity: 0.4;
 }
-.fa-facebook{
-    background-color: #3B5998;
-    color: #fff;
+.fa-facebook {
+  background-color: #3b5998;
+  color: #fff;
 }
-.fa-twitter{
-    background-color: #55ACEE;
-    color: #fff;
+.fa-twitter {
+  background-color: #55acee;
+  color: #fff;
 }
-.fa-instagram{
-    background-color: #125688;
-    color: #fff;
+.fa-instagram {
+  background-color: #125688;
+  color: #fff;
 }
