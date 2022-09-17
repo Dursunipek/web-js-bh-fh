@@ -1,0 +1,66 @@
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Attribute selector */
+      /* a[target] {
+            background-color: red;
+            --> a elementi altındaki target attribute'na sahip etiketleri seçer
+        }
+        [class] {
+            background-color: blue;
+            --> class attribute'una sahip tüm elementleri seçer
+        } */
+
+      /* Attribute value selector */
+
+      /* a[class="active"] {
+            background-color: blue;
+            --> a etiketi altındaki  active class'ına ait tüm elementleri seçer. Sadece active olması şartı ile
+        }  */
+
+      /* Attribute '*' selector  */
+      /* [class*="active"] {
+            background-color: blue;
+            --> a etiketi altındaki içerisinde active geçen  class'lara ait tüm etiketleri seçer. Class attribute'unda tek olması şartı olmadan
+        } */
+
+      /* Attribute '~' selector  */
+      /* [class~="active"] {
+            background-color: blue;
+            --> İçerisinde active class'ı olan elementleri seçer. Tek başına class olmak zorundadır
+        } */
+
+      /* Attribute '|' selector */
+
+      /* [class|="active"] {
+            background-color: blue;
+            --> İçerisinde active class'ı olan ve active ile başlayan elemanlar
+        } */
+
+      /* Attribute '^' selector  */
+      /* [class^="active"] {
+            background-color: blue;
+            --> Active sınıfına sahip olan elemanları seçer. Active ile başlamalıdır
+        } */
+
+      /* Attribute '$' selector */
+      [class$="active"] {
+        background-color: blue;
+        /* Active class'ı ile biten elementleri seçer */
+      }
+    </style>
+  </head>
+  <body>
+    <span class="text active">text</span>
+
+    <nav>
+      <a href="" target="_blank">home</a>
+      <a href="" class="active">about</a>
+      <a href="" class="link">contact</a>
+    </nav>
+  </body>
+</html>
