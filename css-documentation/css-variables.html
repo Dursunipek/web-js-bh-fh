@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root{
+          /* Root içerisinde tanımlanan değişkenler global'dir */
+          --orange: #f7786b;
+          --white: #fff;
+      }
+      body{
+        background-color: var(--orange);
+        padding: 1em 1.5em;
+    }
+    .container{
+        padding: 1em 1.5em;
+        background-color: var(--white);
+      }
+      h1,h2,p{
+        color: var(--orange);
+      }
+      button{
+        background-color: var(--orange);
+        border: 1px solid var(--orange);
+        color: var(--white);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+      <div>
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque neque
+          ex facilis qui fugit enim nemo reiciendis doloribus dolore. Maxime
+          autem exercitationem eum blanditiis repudiandae accusamus, pariatur
+          mollitia dicta tempore eaque dolorem, aliquam facere? Quos, commodi
+          eveniet saepe ex corrupti eum natus inventore beatae, minima aperiam,
+          voluptatibus error at deserunt!
+        </p>
+      </div>
+      <div>
+        <button>Save</button>
+        <button>Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
