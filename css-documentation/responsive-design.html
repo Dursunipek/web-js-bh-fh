@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive-Design</title>
+    <style>
+      body {
+        background-color: cadetblue;
+      }
+      h1 {
+        display: none;
+      }
+      /*Phones*/
+      @media (max-width: 575px) {
+        #Phones h1 {
+          display: block;
+        }
+        body {
+          background-color: bisque;
+        }
+      }
+      /*Landscape*/
+      @media (min-width: 576px) and (max-width: 767px) {
+        #Landscape h1 {
+          display: block;
+        }
+        body {
+          background-color: rgb(107, 216, 77);
+        }
+      }
+      /*Tablets*/
+      @media (min-width: 768px) and (max-width: 991px) {
+        #Tablets h1 {
+          display: block;
+        }
+        body {
+          background-color: rgb(220, 56, 179);
+        }
+      }
+      /*Desktop*/
+      @media (min-width: 992px) and (max-width: 1199px) {
+        #Desktop h1 {
+          display: block;
+        }
+        body {
+          background-color: rgb(202, 210, 90);
+        }
+      }
+      /*Large*/
+      @media (min-width: 1200px) and (max-width: 1399px) {
+        #Large h1 {
+          display: block;
+        }
+        body {
+          background-color: rgb(28, 165, 172);
+        }
+      }
+      /*Xlarge*/
+      @media (min-width: 1400px) {
+        #Xlarge h1 {
+          display: block;
+        }
+        body {
+          background-color: rgb(109, 56, 159);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Phones"><h1>Phones</h1></div>
+    <div id="Landscape"><h1>Landscape</h1></div>
+    <div id="Tablets"><h1>Tablets</h1></div>
+    <div id="Desktop"><h1>Desktop</h1></div>
+    <div id="Large"><h1>Large</h1></div>
+    <div id="Xlarge"><h1>Xlarge</h1></div>
+  </body>
+</html>
