@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Creating Element</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">Todo App</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" id="txtTaskName" class="form-control"/>
+                                    <button type="button" class="btn btn-primary" id="btnAddNewTask">Add</button>
+                                    <!--Button type'ı button olarak belirtilmez ise her event sonrasında sayfa yenilenir. Sayfanın yenilenmemesi için type'ın button olarak belirlenmnesi gerekmektedir.
+                                    Eğer button türü submit olarak veri tabanına veri göndermek için seçilirse sayfa yenilenir ancak bunu js kodları ile kapatabiliriz-->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <button type="button" class="btn btn-danger float-end" id="btnDelete">
+                                Delete
+                            </button>
+                        </div>
+                        <ul
+                            id="task-list"
+                            class="list-group list-group-flush"
+                        ></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let taskList = [
+                // obje yapısında bir görev listesi oluşturuldu
+                { "id": 1, "taskName": "Task-1" },
+                { "id": 2, "taskName": "Task-2" },
+                { "id": 3, "taskName": "Task-3" },
+                { "id": 4, "taskName": "Task-4" },
+                { "id": 5, "taskName": "Task-5" },
+                { "id": 6, "taskName": "Task-6" },
+                { "id": 7, "taskName": "Task-7" },
+            ];
+
+            displayTaskList(); // Sayfa açıldığında mevcut liste ekrana yazdırıldı
+            function displayTaskList(){ // Listeyi modüler bir şekilde yenilemek için fonksiyon oluşturuldu
+                let ul = document.getElementById("task-list");
+                ul.innerHTML = ""; // Her yenileme sonrası liste sıfırlanarak veriler tekrar içe aktarıldı
+                for (let task of taskList) {
+                    let li = ` 
+                        <li class="task list-group-item">
+                            <div class="form-check">
+                                <input type="checkbox" id="${task.id}" class="form-check-input">
+                                <label for="${task.id}" class="form-check-label">${task.taskName}</label>
+                            </div>
+                        </li>
+                            `;
+                    ul.insertAdjacentHTML("beforeend", li); 
+                }
+            }
+            
+            const btnAdd = document.querySelector("#btnAddNewTask"); // Ekle butonuna yeni task eklemek için event belirlendi
+            
+            btnAdd.addEventListener("click",addNewItem);
+            btnAdd.addEventListener("keypress",function(){
+                if(event.key == "Enter"){
+                    btnAdd.click();
+                }
+            });
+           
+            function addNewItem(event){
+                // Yeni task eklemek için yazılan event function
+                let txtNewTask = document.querySelector("#txtTaskName").value; // Eklenecek task'in text bilgileri text input'undan alındı
+                // console.log(txtNewTask);
+                if(txtNewTask == ""){
+                    alert("Task girilmemiş !!");
+                }else{
+                    taskList.push({"id": taskList.length + 1, "taskName": txtNewTask}) // Yeni task taskList'e eklendi
+                    displayTaskList(); // Mevcut task'ler yenilenerek ekrana bastırıldı
+                }
+                event.preventDefault();
+            }
+
+        </script>
+    </body>
+</html>
