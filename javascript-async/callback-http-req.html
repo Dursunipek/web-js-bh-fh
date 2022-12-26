@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row"></div>
+    </div>
+    <script>
+        // Javascript ile veri tabanından direkt olarak veri çekemeyiz. Bunları api ve farklı servisler ile yapabiliriz.
+        // Javascript kullanıcının tarayıcısında çalışmaktadır. 
+        // Api bize veri tabanı ile frontend arasındaki bilgi alışverişini sağlayabilir.
+        // Api beckend de çalışır ve api ile getirilen object yapı javascriptte çalışması için json veri türüne çevirilir.
+        // Json yapı da javascript tarafından javascript objesi olarak okunabilir.
+        // Request oluşturma
+        function getCountry(country){
+            // Girilen ülkenin bilgilerini geri döndüren fonksiyon
+            // Rest Countries servisi kullanılarak bilgiler alınmaktadır.
+            
+            const request = new XMLHttpRequest();
+            request.open('GET', 'https://restcountries.com/v3.1/name/' + country);
+            request.send();
+
+            // Aync
+            request.addEventListener('load', () => {
+                /* Bu aşamada eğer callback işlemi uygulanarak load beklenmeden api içerisindeki responseText alınsaydı bize geriye null bir değer dönecekti. Api tarafındaki tum veri programa ulastıktan sonra gerı donen obje uzerinde islem yapabiliriz.*/
+                const data = JSON.parse(request.responseText); // JSON.parse metodu ile gelen string değer javascript objesine çevrildi.
+                console.log(data);
+                displayCountries(data);
+
+                // Display Neighbors
+
+                const neighborsCountries = data[0].borders;
+
+                const req = new XMLHttpRequest();
+                req.open('GET', `https://restcountries.com/v2/alpha?codes=${neighborsCountries}`);
+                req.send();
+                req.addEventListener('load', () => {
+                    const neighborsData = JSON.parse(req.responseText);
+                    console.log(neighborsData);
+                    displayCountries(neighborsData);
+                })
+            })
+
+            
+
+
+        }
+        function displayCountries(data){
+            /* Metod get ile elde edilen ülke verilerini bootstrap kütüphanesi ile görselleştirmektedir.*/
+            for(let country of data){
+                const html = `<div class="card" style="width: 18rem;">
+                    <img src="${country.flags.png}" class="card-img-top" alt="turkey flag">
+                    <div class="card-body">
+                        <p class="card-text">${country.name}</p>
+                        </div>
+                        </div>`;
+                        document.querySelector(".container .row").insertAdjacentHTML("beforeend", html);
+            }
+        }
+        getCountry("turkey");
+    </script>
+</body>
+</html>
