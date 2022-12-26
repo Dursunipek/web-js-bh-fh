@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbacks</title>
+</head>
+<body>
+    <script>
+        // Asynchronous
+        /* Asynchronous programlama bir işlemin sıralı bir şekilde değilde talep üzerine yada belirli bir süre sonra yapılmasıdır. Örneğin veri tabanından bir veri beklerken arka planda işlemler duraklamaz ve çalışmaya devam eder. Bu asynchronous çalışma mantığına bir örnektir. Yada müşteri kasada siparişini verdikten sonra sıra beklerken kasa kitlenmez ve müşteri beklerken aynı kasadan tekrar farklı birisine işlem yapılabilir. Asynchron programlama da bir işlemin ne kadar süreceğini bilemeyiz ancak işlem bittikten sonra diğer işlemin başlaması kontrol edilebilir.
+        */
+
+        // Sync Ex
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        // Output -> 1, 2, 3
+        
+        // Async Ex
+        // console.log(1);
+        // setTimeout(() => {
+        //     console.log(2);
+        // }, 2000);
+        // console.log(3);
+        // Output -> 1, 3, 2
+
+        // Callback Example
+        const login = (username, password, callback) => {
+            setTimeout(() => {
+                callback({username: username, email: "info@gmail.com"}) // Normalde veri tabanından gelecek bilgiler yer almaktadır.
+            }, 1000);
+        }
+
+        const getPostsByUsername = (username, callback) =>{
+            setTimeout(()=>{
+                callback(["Post1","Post2","Post3","Post4"]);
+            }, 2000);
+        }
+        const getPostDetails = (post, callback) => {
+            setTimeout(() => {
+                callback("Post Details")
+            }, 2000);
+        }
+
+        login("Anil","12345AA", user => {
+            console.log(user.username);
+            console.log(user.email);
+            
+            getPostsByUsername(user.username, (posts) => {
+                console.log(posts[0]);
+                
+                getPostDetails(posts[0], details => {
+                    console.log(details);
+                })
+            })
+        })
+
+        // Callback yöntemi bu şekilde giderek derinleşmekte ve callback hell denilen bir soruna neden olmaktadır. Callback yöntemi yöntemlerden biridir. Daha iyi yöntemler de vardır.
+    </script>
+</body>
+</html>
