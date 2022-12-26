@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row"></div>
+    </div>
+    <script>
+        const serverStatus = true;
+        async function getCountry(country){
+            try{
+                const response = await fetch("https://restcountries.com/v3.1/name/" + country)
+                if(!serverStatus){
+                    throw new Error("Con not found country...");
+                }
+                const data = await response.json();
+                // console.log(data);
+                displayCountries(data);
+
+                const neighborsCountries =  data[0].borders;
+                if(!neighborsCountries){
+                    throw new Error("Can not found neighbor country...")
+                }
+                // console.log(neighborsCountries);
+                const response2 = await fetch("https://restcountries.com/v2/alpha?codes=" + neighborsCountries.toString());
+                const data2 = await response2.json();
+
+                displayCountries(data2);
+            }catch(err){
+                console.log(err);
+            }
+        }
+        getCountry("Japan");
+
+
+        function displayCountries(data){
+            /* Metod get ile elde edilen ülke verilerini bootstrap kütüphanesi ile görselleştirmektedir.*/
+            for(let country of data){
+                const html = `<div class="card" style="width: 18rem;">
+                    <img src="${country.flags.png}" class="card-img-top" alt="turkey flag">
+                    <div class="card-body">
+                        <p class="card-text">${country.name}</p>
+                        </div>
+                        </div>`;
+                        document.querySelector(".container .row").insertAdjacentHTML("beforeend", html);
+            }
+        }
+    </script>
+</body>
+</html>
